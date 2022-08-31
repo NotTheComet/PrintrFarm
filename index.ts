@@ -1,10 +1,14 @@
-import * as express from 'express';
+import { Express } from 'express';
 import * as http from 'http';
 import * as path from 'path';
 
-
+const port = 6000;
 const app = express();
 
-app.listen(() => {
-  console.log('Server started');
+app.get('/', (req, res) => {
+	 res.redirect('/dashboard');
 });
+function Listen() {
+	http.createServer(app).listen(port);
+	console.log(`Started server at ${port}`);
+}
