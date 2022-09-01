@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["../index.ts"],
-  "sourcesContent": ["import express from 'express';\nimport * as path from 'path';\n\nconst app = express();\n\napp.get('/', (req, res) => { res.redirect('/dashboard');});\n\n\n\napp.listen(() => {\n  console.log('Server started');\n});\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,qBAAoB;AAGpB,MAAM,MAAM;AAEZ,IAAI,IAAI,KAAK,CAAC,KAAK,QAAQ;AAAE,MAAI,SAAS;AAAA;AAI1C,IAAI,OAAO,MAAM;AACf,UAAQ,IAAI;AAAA;",
+  "sourcesContent": ["import express from 'express';\nimport * as path from 'path';\nimport * as os from 'os';\n\nconst app = express();\n\napp.get('/', (req, res) => { res.redirect('/dashboard');});\n\napp.get('/dashboard', (req, res) => {\n\tres.sendFile(path.join(os.homedir + 'PrintrFarmServer' + '/html/dashboard.html'));\n});\n\napp.listen(() => {\n  console.log('Server started');\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,qBAAoB;AACpB,WAAsB;AACtB,SAAoB;AAEpB,MAAM,MAAM;AAEZ,IAAI,IAAI,KAAK,CAAC,KAAK,QAAQ;AAAE,MAAI,SAAS;AAAA;AAE1C,IAAI,IAAI,cAAc,CAAC,KAAK,QAAQ;AACnC,MAAI,SAAS,KAAK,KAAK,GAAG,UAAU;AAAA;AAGrC,IAAI,OAAO,MAAM;AACf,UAAQ,IAAI;AAAA;",
   "names": []
 }

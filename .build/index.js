@@ -17,9 +17,14 @@ var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
 };
 var import_express = __toModule(require("express"));
+var path = __toModule(require("path"));
+var os = __toModule(require("os"));
 const app = (0, import_express.default)();
 app.get("/", (req, res) => {
   res.redirect("/dashboard");
+});
+app.get("/dashboard", (req, res) => {
+  res.sendFile(path.join(os.homedir + "PrintrFarmServer/html/dashboard.html"));
 });
 app.listen(() => {
   console.log("Server started");
