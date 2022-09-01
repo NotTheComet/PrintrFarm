@@ -1,7 +1,7 @@
 {
   "version": 3,
-  "sources": [],
-  "sourcesContent": [],
-  "mappings": "",
+  "sources": ["../index.ts"],
+  "sourcesContent": ["import express from 'express';\nimport * as path from 'path';\n\nconst app = express();\n\napp.get('/', (req, res) => { res.redirect('/dashboard');});\n\n\n\napp.listen(() => {\n  console.log('Server started');\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,qBAAoB;AAGpB,MAAM,MAAM;AAEZ,IAAI,IAAI,KAAK,CAAC,KAAK,QAAQ;AAAE,MAAI,SAAS;AAAA;AAI1C,IAAI,OAAO,MAAM;AACf,UAAQ,IAAI;AAAA;",
   "names": []
 }
