@@ -20,11 +20,33 @@ var import_express = __toModule(require("express"));
 var path = __toModule(require("path"));
 var os = __toModule(require("os"));
 const app = (0, import_express.default)();
+var Validrequest;
+(function(Validrequest2) {
+  Validrequest2["init"] = "init";
+  Validrequest2["job"] = "job";
+  Validrequest2["info"] = "info";
+})(Validrequest || (Validrequest = {}));
+const requestValues = Object.values(Validrequest);
 app.get("/", (req, res) => {
   res.redirect("/dashboard");
 });
 app.get("/dashboard", (req, res) => {
-  res.sendFile(path.join(os.homedir + "PrintrFarmServer/html/dashboard.html"));
+  res.sendFile(path.join(os.homedir + "/PrintrFarmServer/html/dashboard.html"));
+  console.log(req.ip, "conneted to Dashboard");
+});
+app.get("/nodes/:node/:req/:data", (req, res) => {
+  let params = req.params;
+  let node = req.params.node;
+  let request = req.params.req;
+  let data = req.params.data;
+  if (requestValues.includes(request)) {
+    if (request == "init") {
+    }
+    if (request == "jobs") {
+    }
+    if (request == "info") {
+    }
+  }
 });
 app.listen(() => {
   console.log("Server started");
