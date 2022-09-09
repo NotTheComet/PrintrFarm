@@ -18,27 +18,6 @@ app.get('/dashboard', (req, res) => {
 	console.log(req.ip, 'conneted to Dashboard');
 });
 
-app.get('/nodes/:node/:req/:data', (req, res) => {
-	let params = req.params;
-	
-	let node = req.params.node;
-	//let ip = req.params.ip; 
-	let request = req.params.req;
-	let data = req.params.data;
-	
-	if (requestValues.includes(request)) {
-		if (request == 'init') {
-		
-		}
-		if (request == 'jobs') {
-		
-		}
-		if (request == 'info') {
-		
-		}
-	}
-});
-
 app.listen(() => {
   console.log('Server started');
 });

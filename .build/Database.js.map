@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../Database.ts"],
-  "sourcesContent": ["import * as path from 'path';\nimport * as fs from 'fs';\n\nconst nodes: string[] = [];\n\nexport function AddClient(data) {\n\tlet dataparse = JSON.parse(data);\n\n\tconst Entry = {'id': `${dataparse.id}`, 'name': `${dataparse.name}`}\n}"],
-  "mappings": ";;;;;;;AAAA;AAAA;AAAA;AAGA,MAAM,QAAkB;AAEjB,mBAAmB,MAAM;AAC/B,MAAI,YAAY,KAAK,MAAM;AAE3B,QAAM,QAAQ,EAAC,MAAM,GAAG,UAAU,MAAM,QAAQ,GAAG,UAAU;AAAA;",
-  "names": []
-}

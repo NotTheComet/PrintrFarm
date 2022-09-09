@@ -16,25 +16,19 @@ var __reExport = (target, module2, desc) => {
 var __toModule = (module2) => {
   return __reExport(__markAsModule(__defProp(module2 != null ? __create(__getProtoOf(module2)) : {}, "default", module2 && module2.__esModule && "default" in module2 ? { get: () => module2.default, enumerable: true } : { value: module2, enumerable: true })), module2);
 };
-var import_express = __toModule(require("express"));
-var path = __toModule(require("path"));
-var os = __toModule(require("os"));
-const app = (0, import_express.default)();
-var Validrequest;
-(function(Validrequest2) {
-  Validrequest2["init"] = "init";
-  Validrequest2["job"] = "job";
-  Validrequest2["info"] = "info";
-})(Validrequest || (Validrequest = {}));
-const requestValues = Object.values(Validrequest);
-app.get("/", (req, res) => {
-  res.redirect("/dashboard");
-});
-app.get("/dashboard", (req, res) => {
-  res.sendFile(path.join(os.homedir + "/PrintrFarmServer/html/dashboard.html"));
-  console.log(req.ip, "conneted to Dashboard");
-});
-app.listen(() => {
-  console.log("Server started");
-});
-//# sourceMappingURL=index.js.map
+var axios = __toModule(require("axios"));
+let apikey = "";
+var urlPaths;
+(function(urlPaths2) {
+  urlPaths2["serverInfo"] = "/api/server";
+})(urlPaths || (urlPaths = {}));
+function AddNode(url) {
+  let apiurl = url;
+  let node = axios.create({
+    baseURL: url,
+    timeout: 1e3,
+    headers: { "X-Api-Key": `${apikey}` }
+  });
+  node.add;
+}
+//# sourceMappingURL=manager.js.map

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../manager.ts"],
+  "sourcesContent": ["import * as axios from 'axios';\n\nlet apikey = '';\n\nenum urlPaths {\n\tserverInfo = '/api/server'\n}\n\nfunction AddNode(url: string) {\n\tlet apiurl = url;\n\t\n\tlet node = axios.create({\n\t\tbaseURL: url,\n\t\ttimeout: 1000,\n\t\theaders: {'X-Api-Key': `${apikey}`}\n\t}); \n\n\tnode.add\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;AAAA,YAAuB;AAEvB,IAAI,SAAS;AAEb,IAAK;AAAL,UAAK,WAAL;AACC,4BAAa;AAAA,GADT;AAIL,iBAAiB,KAAa;AAC7B,MAAI,SAAS;AAEb,MAAI,OAAO,MAAM,OAAO;AAAA,IACvB,SAAS;AAAA,IACT,SAAS;AAAA,IACT,SAAS,EAAC,aAAa,GAAG;AAAA;AAG3B,OAAK;AAAA;",
+  "names": []
+}
